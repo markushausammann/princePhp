@@ -1,5 +1,5 @@
 {
-    "name": "markushausammann/princePhp",
+    "name": "markushausammann/prince-php",
     "description": "A better PHP wrapper for the awesome PrinceXML PDF creator.",
     "keywords": ["princexml", "php", "pdf", "xhtml"],
     "homepage": "https://github.com/markushausammann/princePhp",
