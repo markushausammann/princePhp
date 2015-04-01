@@ -16,7 +16,7 @@ In the official library, the `exePath` is injected into the constructor, but tha
 service harder. Instead use the respective setter.
 
     $prince = new Prince();
-    $prince->setExePath('/usr/local/bin/prince');
+    $prince->setExePath('/your/bin/path');
     
 Please note that the default path is `/usr/local/bin/prince`. So you have the option of just making sure 
 the binary of a symlink is in that location if you're running Prince on Linux.
