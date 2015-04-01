@@ -16,12 +16,12 @@ On Windows, be sure to specify the path to the`prince.exe` file located within t
 ## Conversion methods
 
 *   [`convert_file`](#convert_file)
-*   [`convert_file_to_file`](#convert_file_to_file)
-*   [`convert_multiple_files`](#convert_multiple_files)
-*   [`convert_string_to_file`](#convert_string_to_file)
-*   [`convert_file_to_passthru`](#convert_file_to_passthru)
-*   [`convert_multiple_files_to_passthru`](#convert_multiple_files_to_passthru)
-*   [`convert_string_to_passthru`](#convert_string_to_passthru)
+*   [`convertFileToFile`](#convertFileToFile)
+*   [`convertMultipleFiles`](#convertMultipleFiles)
+*   [`convertStringToFile`](#convertStringToFile)
+*   [`convertFileToPassthru`](#convertFileToPassthru)
+*   [`convertMultipleFilesToPassthru`](#convertMultipleFilesToPassthru)
+*   [`convertStringToPassthru`](#convertStringToPassthru)
 
 ## Configuration methods
 
@@ -73,10 +73,10 @@ Convert an XML or HTML file to a PDF file. The name of the output PDF file will 
 
 <dl><dt>`xmlPath`</dt><dd>The filename of the input XML or HTML document.</dd><dt>`msgs`</dt><dd>An optional array in which to return error and warning messages. Each message is returned as an array of three strings: the message code (`'err'`,`'wrn'` or`'inf'`), the message location (eg. a filename) and the message text.</dd><dt>`returns`</dt><dd>True if a PDF file was generated successfully, false otherwise.</dd></dl>
 
-</a><a name="convert_file_to_file">
+</a><a name="convertFileToFile">
 ```php
 
-public function convert_file_to_file($xmlPath, $pdfPath, &$msgs = array())
+public function convertFileToFile($xmlPath, $pdfPath, &$msgs = array())
 
 ```
 
@@ -86,10 +86,10 @@ Convert an XML or HTML file to a PDF file. Returns true if a PDF file was genera
 
 <dl><dt>`xmlPath`</dt><dd>The filename of the input XML or HTML document.</dd><dt>`pdfPath`</dt><dd>The filename of the output PDF file.</dd><dt>`msgs`</dt><dd>An optional array in which to return error and warning messages. Each message is returned as an array of three strings: the message code (`'err'`,`'wrn'` or`'inf'`), the message location (eg. a filename) and the message text.</dd><dt>`returns`</dt><dd>True if a PDF file was generated successfully, false otherwise.</dd></dl>
 
-</a><a name="convert_multiple_files">
+</a><a name="convertMultipleFiles">
 ```php
 
-public function convert_multiple_files($xmlPaths, $pdfPath, &$msgs = array())
+public function convertMultipleFiles($xmlPaths, $pdfPath, &$msgs = array())
 
 ```
 
@@ -99,10 +99,10 @@ Convert multiple XML or HTML files to a PDF file. Returns true if a PDF file was
 
 <dl><dt>`xmlPaths`</dt><dd>An array of the input XML or HTML documents.</dd><dt>`pdfPath`</dt><dd>The filename of the output PDF file.</dd><dt>`msgs`</dt><dd>An optional array in which to return error and warning messages. Each message is returned as an array of three strings: the message code (`'err'`,`'wrn'` or`'inf'`), the message location (eg. a filename) and the message text.</dd><dt>`returns`</dt><dd>True if a PDF file was generated successfully, false otherwise.</dd></dl>
 
-</a><a name="convert_string_to_file">
+</a><a name="convertStringToFile">
 ```php
 
-public function convert_string_to_file($xmlString, $pdfPath, &$msgs = array())
+public function convertStringToFile($xmlString, $pdfPath, &$msgs = array())
 
 ```
 
@@ -112,10 +112,10 @@ Convert an XML or HTML string to a PDF file. Returns true if a PDF file was gene
 
 <dl><dt>`xmlString`</dt><dd>A string containing an XML or HTML document.</dd><dt>`pdfPath`</dt><dd>The filename of the output PDF file.</dd><dt>`msgs`</dt><dd>An optional array in which to return error and warning messages. Each message is returned as an array of three strings: the message code (`'err'`,`'wrn'` or`'inf'`), the message location (eg. a filename) and the message text.</dd><dt>`returns`</dt><dd>True if a PDF file was generated successfully, false otherwise.</dd></dl>
 
-</a><a name="convert_file_to_passthru">
+</a><a name="convertFileToPassthru">
 ```php
 
-public function convert_file_to_passthru($xmlPath)
+public function convertFileToPassthru($xmlPath)
 
 ```
 
@@ -142,10 +142,10 @@ header('Content-Disposition: inline; filename="foo.pdf"');
 You may also specify`attachment` for the Content-Disposition header instead of`inline`, so that the browser will prompt the user to save the PDF file instead of displaying it.
 
 
-</a><a name="convert_multiple_files_to_passthru">
+</a><a name="convertMultipleFilesToPassthru">
 ```php
 
-public function convert_multiple_files_to_passthru($xmlPaths)
+public function convertMultipleFilesToPassthru($xmlPaths)
 
 ```
 
@@ -172,10 +172,10 @@ header('Content-Disposition: inline; filename="foo.pdf"');
 You may also specify`attachment` for the Content-Disposition header instead of`inline`, so that the browser will prompt the user to save the PDF file instead of displaying it.
 
 
-</a><a name="convert_string_to_passthru">
+</a><a name="convertStringToPassthru">
 ```php
 
-public function convert_string_to_passthru($xmlString)
+public function convertStringToPassthru($xmlString)
 
 ```
 
