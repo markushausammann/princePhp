@@ -21,7 +21,7 @@ use PrincePHP\Exception\InputTypeException;
  */
 class ServiceWrapper
 {
-    private $exePath;
+    private $exePath = '/usr/local/bin/prince';
     private $styleSheets = '';
     private $scripts = '';
     private $fileAttachments = '';
